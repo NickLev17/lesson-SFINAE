@@ -36,25 +36,25 @@ else()
     target_compile_options(print_ip PRIVATE -Wall -Wextra -pedantic) 
 endif()
 
-option(BUILD_DOC "Build documentation" ON)
+#option(BUILD_DOC "Build documentation" ON)
 
-find_package(Doxygen REQUIRED)
+#find_package(Doxygen REQUIRED)
 
-if(DOXYGEN_FOUND AND BUILD_DOC)
-    set(DOXYGEN_IN ${CMAKE_CURRENT_SOURCE_DIR}/doc/Doxyfile.in)
-    set(DOXYGEN_OUT ${CMAKE_CURRENT_BINARY_DIR}/Doxyfile)
+#if(DOXYGEN_FOUND AND BUILD_DOC)
+    #set(DOXYGEN_IN ${CMAKE_CURRENT_SOURCE_DIR}/doc/Doxyfile.in)
+    #set(DOXYGEN_OUT ${CMAKE_CURRENT_BINARY_DIR}/Doxyfile)
 
-    configure_file(${DOXYGEN_IN} ${DOXYGEN_OUT} @ONLY)
+    #configure_file(${DOXYGEN_IN} ${DOXYGEN_OUT} @ONLY)
 
-    add_custom_target(doc ALL
-        COMMAND ${DOXYGEN_EXECUTABLE} ${DOXYGEN_OUT}
-        WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
-        COMMENT "Generating API documentation with Doxygen"
-       VERBATIM
-    )
-else()
-   message(WARNING "Doxygen not found or BUILD_DOC disabled, documentation will not be generated")
-endif()
+    #add_custom_target(doc ALL
+       # COMMAND ${DOXYGEN_EXECUTABLE} ${DOXYGEN_OUT}
+       # WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
+       # COMMENT "Generating API documentation with Doxygen"
+      # VERBATIM
+    #)
+#else()
+ #  message(WARNING "Doxygen not found or BUILD_DOC disabled, documentation will not be generated")
+#endif()
 
 
 install(TARGETS print_ip RUNTIME DESTINATION bin)
