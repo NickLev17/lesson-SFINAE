@@ -6,13 +6,11 @@ set(PROJECT_VERSION 0.0.${PATCH_VERSION})
 
 project(print_ip VERSION ${PROJECT_VERSION})
 
-# configure_file(Doxyfile.t Doxyfile.tsv COPYONLY)
-# configure_file(Doxyfile.txt 
-# ${CMAKE_CURRENT_BINARY_DIR}/debug/ip_filter.tsv COPYONLY)
 
-#configure_file(version.h.in version.h)
 
-#add_subdirectory(doc)
+configure_file(version.h.in version.h)
+
+
  configure_file(Doxyfile.in
 ${CMAKE_CURRENT_BINARY_DIR}/doc/Doxyfile.in COPYONLY)
 
