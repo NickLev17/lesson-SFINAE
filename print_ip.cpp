@@ -6,7 +6,7 @@
 #include <string>
 using namespace std;
 
-/// @brief Базовый шаблон по молчанию false
+/// \brief Базовый шаблон по молчанию false
 /// @tparam T В качестве параметра функция принимает тип данных строка.
 template <typename T, typename = void>
 struct is_string : false_type
