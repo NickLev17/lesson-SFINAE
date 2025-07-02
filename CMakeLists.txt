@@ -44,7 +44,7 @@ if(DOXYGEN_FOUND AND BUILD_DOC)
     set(DOXYGEN_IN ${CMAKE_CURRENT_SOURCE_DIR}/doc/Doxyfile.in)
     set(DOXYGEN_OUT ${CMAKE_CURRENT_BINARY_DIR}/Doxyfile)
 
-    #configure_file(${DOXYGEN_IN} ${DOXYGEN_OUT} @ONLY)
+    configure_file(${DOXYGEN_IN} ${DOXYGEN_OUT} @ONLY)
 
     add_custom_target(doc ALL
         COMMAND ${DOXYGEN_EXECUTABLE} ${DOXYGEN_OUT}
