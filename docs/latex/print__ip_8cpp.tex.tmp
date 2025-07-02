@@ -1,0 +1,164 @@
+\doxysection{/home/ubuntu/lesson-\/\+SFINAE/print\+\_\+ip.cpp File Reference}
+\hypertarget{print__ip_8cpp}{}\label{print__ip_8cpp}\index{/home/ubuntu/lesson-\/SFINAE/print\_ip.cpp@{/home/ubuntu/lesson-\/SFINAE/print\_ip.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$type\+\_\+traits$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$list$>$}\newline
+{\ttfamily \#include $<$tuple$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+Include dependency graph for print\+\_\+ip.\+cpp\+:
+% FIG 0
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structis__string}{is\+\_\+string$<$ T, typename $>$}}
+\begin{DoxyCompactList}\small\item\em Базовый шаблон по молчанию false. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structis__string_3_01std_1_1string_01_4}{is\+\_\+string$<$ std\+::string $>$}}
+\begin{DoxyCompactList}\small\item\em Базовый шаблон true. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structis__string_3_01T_00_01std_1_1enable__if__t_3_01std_1_1is__same__v_3_01T_00_01const_01char_9e7c3d36d25111ef590e5b11b3894c7a}{is\+\_\+string$<$ T, std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+same\+\_\+v$<$ T, const char \texorpdfstring{$\ast$}{*} $>$\texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|}is\+\_\+same\+\_\+v$<$ T, char \texorpdfstring{$\ast$}{*} $>$ $>$ $>$}}
+\begin{DoxyCompactList}\small\item\em Обьединённая специализация шаблона для типо char\texorpdfstring{$\ast$}{*} и const char\texorpdfstring{$\ast$}{*}. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structis__vector}{is\+\_\+vector$<$ T $>$}}
+\begin{DoxyCompactList}\small\item\em Базовый шаблон по молчанию false. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structis__vector_3_01std_1_1vector_3_01T_00_01Alloc_01_4_01_4}{is\+\_\+vector$<$ std\+::vector$<$ T, Alloc $>$ $>$}}
+\begin{DoxyCompactList}\small\item\em Cпециализация шаблона для типа вектор. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structis__list}{is\+\_\+list$<$ T $>$}}
+\begin{DoxyCompactList}\small\item\em Базовый шаблон по молчанию false. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structis__list_3_01std_1_1list_3_01T_00_01Alloc_01_4_01_4}{is\+\_\+list$<$ std\+::list$<$ T, Alloc $>$ $>$}}
+\begin{DoxyCompactList}\small\item\em Cпециализация шаблона для типа вектор. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structis__vector__or__list}{is\+\_\+vector\+\_\+or\+\_\+list$<$ T $>$}}
+\begin{DoxyCompactList}\small\item\em Обьединенная специализация шаблона для типов вектор и список. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structis__tuple}{is\+\_\+tuple$<$ U, T $>$}}
+\begin{DoxyCompactList}\small\item\em Базовый шаблон по умолчанию false. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structis__tuple_3_01std_1_1tuple_3_01Args_8_8_8_01_4_00_01T_01_4}{is\+\_\+tuple$<$ std\+::tuple$<$ Args... $>$, T $>$}}
+\begin{DoxyCompactList}\small\item\em Специализация шаблна с переменным количеством аргументов и проверкой типа. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::enable\+\_\+if$<$ std\+::is\+\_\+integral$<$ T $>$\+::value, void $>$\+::type \mbox{\hyperlink{print__ip_8cpp_a643167f9ce61dfc137976fd6fd875c85}{print\+\_\+ip}} (const T \&value)
+\begin{DoxyCompactList}\small\item\em Функция вывода ip адреса. Реализована через перегрузку шаблонных функций в сответсвии с идиомой SFINAE. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::enable\+\_\+if$<$ \mbox{\hyperlink{structis__string}{is\+\_\+string}}$<$ T $>$\+::value, void $>$\+::type \mbox{\hyperlink{print__ip_8cpp_adedd19b17f027f18acf5ebdc0abe3aa3}{print\+\_\+ip}} (const T \&value)
+\begin{DoxyCompactList}\small\item\em Функция вывода ip адреса. Реализована через перегрузку шаблонных функций в сответсвии с идиомой SFINAE. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::enable\+\_\+if$<$ \mbox{\hyperlink{structis__vector__or__list}{is\+\_\+vector\+\_\+or\+\_\+list}}$<$ T $>$\+::value, void $>$\+::type \mbox{\hyperlink{print__ip_8cpp_aab768da97bde00cd124c5cb424a4b935}{print\+\_\+ip}} (const T \&value)
+\begin{DoxyCompactList}\small\item\em Функция вывода ip адреса. Реализована через перегрузку шаблонных функций в сответсвии с идиомой SFINAE. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T , std\+::size\+\_\+t... Is$>$ }\\void \mbox{\hyperlink{print__ip_8cpp_a1c1fe993271ae793f4151e9cf33937b3}{print\+\_\+tuple\+\_\+impl}} (const T \&tpl, std\+::index\+\_\+sequence$<$ Is... $>$)
+\begin{DoxyCompactList}\small\item\em Вспомогательная функция для вывода ip адреса \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::enable\+\_\+if$<$ \mbox{\hyperlink{structis__tuple}{is\+\_\+tuple}}$<$ T, typenamestd\+::tuple\+\_\+element$<$ 0, T $>$\+::type $>$\+::value, void $>$\+::type \mbox{\hyperlink{print__ip_8cpp_a5dc7f149cc2d03d15485b85566a2c70c}{print\+\_\+ip}} (const T \&value)
+\begin{DoxyCompactList}\small\item\em Функция вывода ip адреса \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{print__ip_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{print__ip_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{print__ip_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+\index{print\_ip.cpp@{print\_ip.cpp}!main@{main}}
+\index{main@{main}!print\_ip.cpp@{print\_ip.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{print__ip_8cpp_a643167f9ce61dfc137976fd6fd875c85}\label{print__ip_8cpp_a643167f9ce61dfc137976fd6fd875c85} 
+\index{print\_ip.cpp@{print\_ip.cpp}!print\_ip@{print\_ip}}
+\index{print\_ip@{print\_ip}!print\_ip.cpp@{print\_ip.cpp}}
+\doxysubsubsection{\texorpdfstring{print\_ip()}{print\_ip()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::enable\+\_\+if$<$ std\+::is\+\_\+integral$<$ T $>$\+::value, void $>$\+::type print\+\_\+ip (\begin{DoxyParamCaption}\item[{const T \&}]{value }\end{DoxyParamCaption})}
+
+
+
+Функция вывода ip адреса. Реализована через перегрузку шаблонных функций в сответсвии с идиомой SFINAE. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & В качестве параметра функция принимает целочисленный тип данных. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Принимаемый тип данных. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Тип void , ничего не возвращает. 
+\end{DoxyReturn}
+\Hypertarget{print__ip_8cpp_adedd19b17f027f18acf5ebdc0abe3aa3}\label{print__ip_8cpp_adedd19b17f027f18acf5ebdc0abe3aa3} 
+\index{print\_ip.cpp@{print\_ip.cpp}!print\_ip@{print\_ip}}
+\index{print\_ip@{print\_ip}!print\_ip.cpp@{print\_ip.cpp}}
+\doxysubsubsection{\texorpdfstring{print\_ip()}{print\_ip()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::enable\+\_\+if$<$ \mbox{\hyperlink{structis__string}{is\+\_\+string}}$<$ T $>$\+::value, void $>$\+::type print\+\_\+ip (\begin{DoxyParamCaption}\item[{const T \&}]{value }\end{DoxyParamCaption})}
+
+
+
+Функция вывода ip адреса. Реализована через перегрузку шаблонных функций в сответсвии с идиомой SFINAE. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & В качестве параметра функция принимает строковый тип данных. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Принимаемый тип данных. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Тип void , ничего не возвращает. 
+\end{DoxyReturn}
+\Hypertarget{print__ip_8cpp_aab768da97bde00cd124c5cb424a4b935}\label{print__ip_8cpp_aab768da97bde00cd124c5cb424a4b935} 
+\index{print\_ip.cpp@{print\_ip.cpp}!print\_ip@{print\_ip}}
+\index{print\_ip@{print\_ip}!print\_ip.cpp@{print\_ip.cpp}}
+\doxysubsubsection{\texorpdfstring{print\_ip()}{print\_ip()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::enable\+\_\+if$<$ \mbox{\hyperlink{structis__vector__or__list}{is\+\_\+vector\+\_\+or\+\_\+list}}$<$ T $>$\+::value, void $>$\+::type print\+\_\+ip (\begin{DoxyParamCaption}\item[{const T \&}]{value }\end{DoxyParamCaption})}
+
+
+
+Функция вывода ip адреса. Реализована через перегрузку шаблонных функций в сответсвии с идиомой SFINAE. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & В качестве параметра функция принимает тип данных вектор или список. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Принимаемый тип данных. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Тип void , ничего не возвращает. 
+\end{DoxyReturn}
+\Hypertarget{print__ip_8cpp_a5dc7f149cc2d03d15485b85566a2c70c}\label{print__ip_8cpp_a5dc7f149cc2d03d15485b85566a2c70c} 
+\index{print\_ip.cpp@{print\_ip.cpp}!print\_ip@{print\_ip}}
+\index{print\_ip@{print\_ip}!print\_ip.cpp@{print\_ip.cpp}}
+\doxysubsubsection{\texorpdfstring{print\_ip()}{print\_ip()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::enable\+\_\+if$<$ \mbox{\hyperlink{structis__tuple}{is\+\_\+tuple}}$<$ T, typenamestd\+::tuple\+\_\+element$<$ 0, T $>$\+::type $>$\+::value, void $>$\+::type print\+\_\+ip (\begin{DoxyParamCaption}\item[{const T \&}]{value }\end{DoxyParamCaption})}
+
+
+
+Функция вывода ip адреса 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & В качестве параметра функция принимает тип данных кортеж \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Принимаемый тип данных. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Тип void , ничего не возвращает. 
+\end{DoxyReturn}
+\Hypertarget{print__ip_8cpp_a1c1fe993271ae793f4151e9cf33937b3}\label{print__ip_8cpp_a1c1fe993271ae793f4151e9cf33937b3} 
+\index{print\_ip.cpp@{print\_ip.cpp}!print\_tuple\_impl@{print\_tuple\_impl}}
+\index{print\_tuple\_impl@{print\_tuple\_impl}!print\_ip.cpp@{print\_ip.cpp}}
+\doxysubsubsection{\texorpdfstring{print\_tuple\_impl()}{print\_tuple\_impl()}}
+{\footnotesize\ttfamily template$<$typename T , std\+::size\+\_\+t... Is$>$ \\
+void print\+\_\+tuple\+\_\+impl (\begin{DoxyParamCaption}\item[{const T \&}]{tpl,  }\item[{std\+::index\+\_\+sequence$<$ Is... $>$}]{ }\end{DoxyParamCaption})}
+
+
+
+Вспомогательная функция для вывода ip адреса 
+
